@@ -1,1 +1,1 @@
-# CS520-HW3.ALL-Paul-Winzer-submission
+Paul Winzer Homework 1 CS520 Algorithm Analysis Hood College Spring 2018

@@ -1,12 +1,19 @@
 import pprint
 
+# global vars
 G = {}
 visited = []
 visit_order = []
 pp = pprint.PrettyPrinter(indent=2)
 
 def algoDFS(filename='ex.txt', v=0): #TODO remove default filename
+	'''
+	does a depth first search on the graph
+	represented by the adjacency matrix in <filename> param
 
+	visits all nodes connected reachable from vertex <v> param
+	
+	'''
 	# read the doc and close the doc
 	with open(filename) as f:
 		doc = f.readlines()

@@ -3,6 +3,8 @@ The main difference is that the program treats adjacency matrix inputs as 0-base
 So nodes in ex.txt are not 1-8 but instead 0-7.
 And nodes in cw14.txt are not A-H but instead 0-10.
 
+This implementation finds all nodes in a graph that are connected to the given input node. It does not, in contrast, return immediately when a desired node is found to be connected to the input node. So if you want to know if node v has a path to node w, you may need to wait longer that you would for an algorithm designed to find return immediately.
+
 In code, adjacency list is stored in dictionary 'G'.
 Keys in 'G' are ints for the node names, 0-n.
 Values in 'G' are lists of the nodes immediately connected to the node key.

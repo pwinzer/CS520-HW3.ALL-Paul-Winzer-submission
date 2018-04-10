@@ -1,0 +1,17 @@
+Sample files ex.txt and cw14.txt come from Figure 6.4(a) from the textbook and problem 14 of this class's classwork, respectively.
+The main difference is that the program treats adjacency matrix inputs as 0-based.
+So nodes in ex.txt are not 1-8 but instead 0-7.
+And nodes in cw14.txt are not A-H but instead 0-10.
+
+This implementation finds all nodes in a graph that are connected to the given input node. It does not, in contrast, return immediately when a desired node is found to be connected to the input node. So if you want to know if node v has a path to node w, you may need to wait longer that you would for an algorithm designed to find return immediately.
+
+In code, adjacency list is stored in dictionary 'G'.
+Keys in 'G' are ints for the node names, 0-n.
+Values in 'G' are lists of the nodes immediately connected to the node key.
+Nodes do not exist in their own adjacency list, so the value/list at key for node n will not contain n itself.
+The values of the lists are in increasing order as a result of how they are loaded from the adjacency matrix file input. This helps the DFS recursion decide which nodes to visit first when a node has more than one adjacent node.
+
+'visited' is a simple list that keeps track of which nodes have been visited.
+When we visit node 'i', we set visited[i] = 1 so that is we cycle back to it during the recursion, we don't visit it again.
+
+'visit_order' is also a simple list. When we mark a node visited at its index 'visited', then we append its name to 'visit_order' so at the end of the recursion we can see the order of visits.

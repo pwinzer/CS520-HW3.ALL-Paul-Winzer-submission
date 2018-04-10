@@ -1,3 +1,5 @@
+For problem 1:
+
 Sample files ex.txt and cw14.txt come from Figure 6.4(a) from the textbook and problem 14 of this class's classwork, respectively.
 The main difference is that the program treats adjacency matrix inputs as 0-based.
 So nodes in ex.txt are not 1-8 but instead 0-7.
@@ -15,3 +17,16 @@ The values of the lists are in increasing order as a result of how they are load
 When we visit node 'i', we set visited[i] = 1 so that is we cycle back to it during the recursion, we don't visit it again.
 
 'visit_order' is also a simple list. When we mark a node visited at its index 'visited', then we append its name to 'visit_order' so at the end of the recursion we can see the order of visits.
+
+For problem 2:
+Sample files are the same as described above.
+
+Structures 'G', 'visited', and 'visited_order' are also the same as above (though 'visited' needed global declaration).
+
+'visited' is treated somewhat differently. It is wiped clean with every iteration, so that when the next iteration begins, the first nodes aren't skipped right out of the gate.
+
+'visit_order' shows the order in which the nodes were discovered among all iterations. So when the iterations discover nodes in the following orders, (0)(0,1,2)(0,1,3,4,2,5,6)(0,1,3,7,4,2,5,6), 'visit_order' records when each node is found for the first time, so it reads [0,1,2,3,4,5,6,7]
+
+There is a while-loop that keeps trying deeper iterations. It exits when either the requested node has been found, so an iteration ended with a 'visited' array whose values were all 1, meaning every node was searched and the search failed.
+
+For both problems 1 and 2, the implementation performs as described in the problem prompt.

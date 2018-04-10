@@ -1,3 +1,12 @@
+How to run programs:
+After unpacking the zip file, navigate to the directory where either .py files resides (prob1.py or prob2.py).
+Open a python2.7 shell with 'python'.
+Import the hw module with 'import <prob?.py>'
+Run prob1 with 'prob1.algoDFS(filename, root)'
+Run prob2 with 'prob2.algoIterDeep(filename, root, node_to_search_for)'
+(Screen shots and code comments also healpul)
+You must quit the shell between executions of each module because the data structures aren't cleared for consecutive runs and behavior will be unpredictable.
+
 For problem 1:
 
 Sample files ex.txt and cw14.txt come from Figure 6.4(a) from the textbook and problem 14 of this class's classwork, respectively.
